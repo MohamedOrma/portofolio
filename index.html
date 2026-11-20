@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Mohamed Mosaad</div>
+            <ul class="links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn">Contact Me</a>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-text">
+                <h1>Aspiring Software Developer</h1>
+                <h2>Mohamed Mosaad</h2>
+                <p>I'm studying programming at the Faculty of Computing and Data Science.</p>
+                <p>I love solving problems and turning ideas into code, one project at a time.</p>
+                <a href="#projects" class="btn">See My Projects</a>
+            </div>
+            <img class="profile" src="profile.jpg" alt="profile picture">
+        </section>
+        <section id="about">
+            <h2 class="title">About Me</h2>
+            <p class="about-text">
+                My name is Mohamed Mosaad, I'm 18 years old and I live in Alexandria.
+                I love playing video games and I am studying at the Faculty of Computing and Data Sciences.
+            </p>
+            <h3 class="sub-title">My Hobbies</h3>
+            <div class="cards">
+                <article class="card">
+                    <div class="icon">🎮</div>
+                    <h4>Video Games</h4>
+                </article>
+                <article class="card">
+                    <div class="icon">📚</div>
+                    <h4>Reading</h4>
+                </article>
+                <article class="card">
+                    <div class="icon">🎌</div>
+                    <h4>Watching Anime</h4>
+                </article>
+            </div>
+            <h3 class="sub-title">Future Goals</h3>
+            <div class="goals">
+                <ul>
+                    <li>Qualify for the ECPC</li>
+                    <li>Don't fail prob</li>
+                    <li>Be a successful programmer</li>
+                </ul>
+            </div>
+        </section>
+        <section id="skills">
+            <h2 class="title">Skills</h2>
+            <h3 class="sub-title">Currently Learning</h3>
+            <div class="badges">
+                <span class="badge learning">Web Development</span>
+                <span class="badge learning">C++</span>
+                <span class="badge learning">Problem Solving</span>
+            </div>
+            <h3 class="sub-title">What I Have Now</h3>
+            <div class="badges">
+                <span class="badge have">Java</span>
+                <span class="badge have">Working With a Team</span>
+            </div>
+        </section>
+        <section id="projects">
+            <h2 class="title">Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>Quick Pay</h3>
+                    <p>A project that I participated in to make an app like InstaPay with Java.</p>
+                    <a href="#">View Project</a>
+                </article>
+                <article class="project-card">
+                    <h3>Maze</h3>
+                    <p>A maze game made using Scratch.</p>
+                    <a href="#">View Project</a>
+                </article>
+            </div>
+        </section>
+        <section id="contact">
+            <h2 class="title">Contact Information</h2>
+            <div class="contact-box">
+                <div class="contact-info">
+                    <a href="tel:+201278882491">Phone Number</a>
+                    <a href="mailto:mohamedmosaad2008@yahoo.com">Email</a>
+                    <a href="https://www.facebook.com/mohamed.mosaad.804322">Social Media</a>
+                </div>
+                <form action="server.php">
+                    <label for="name">Enter name:</label>
+                    <input type="text" name="name" id="name" required>
+                    <label for="email">Enter email:</label>
+                    <input type="email" name="email" id="email" required>
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
