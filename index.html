@@ -18,6 +18,8 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <a href="#contact" class="btn">Contact Me</a>
+            <button id="theme-btn">Light Mode</button>
+            <button id="menu-btn" class="menu-btn">&#9776;</button>
         </nav>
     </header>
     <main>
@@ -28,6 +30,8 @@
                 <p>I'm studying programming at the Faculty of Computing and Data Science.</p>
                 <p>I love solving problems and turning ideas into code, one project at a time.</p>
                 <a href="#projects" class="btn">See My Projects</a>
+                <button id="hello-btn" class="btn">Say Hello</button>
+                <p id="welcome"></p>
             </div>
             <img class="profile" src="profile.jpg" alt="profile picture">
         </section>
@@ -52,6 +56,7 @@
                     <h4>Watching Anime</h4>
                 </article>
             </div>
+            <p id="hobby-msg" class="about-text">Click on a hobby to see more!</p>
             <h3 class="sub-title">Future Goals</h3>
             <div class="goals">
                 <ul>
@@ -70,10 +75,16 @@
                 <span class="badge learning">Problem Solving</span>
             </div>
             <h3 class="sub-title">What I Have Now</h3>
-            <div class="badges">
+            <div class="badges" id="have-badges">
                 <span class="badge have">Java</span>
                 <span class="badge have">Working With a Team</span>
             </div>
+            <h3 class="sub-title">Add a Skill</h3>
+            <div class="add-skill">
+                <input type="text" id="skill-input" placeholder="Enter a skill">
+                <button id="add-skill-btn">Add Skill</button>
+            </div>
+            <p id="skill-msg"></p>
         </section>
         <section id="projects">
             <h2 class="title">Projects</h2>
@@ -98,7 +109,7 @@
                     <a href="mailto:mohamedmosaad2008@yahoo.com">Email</a>
                     <a href="https://www.facebook.com/mohamed.mosaad.804322">Social Media</a>
                 </div>
-                <form action="server.php">
+                <form id="contact-form" action="server.php" novalidate>
                     <label for="name">Enter name:</label>
                     <input type="text" name="name" id="name" required>
                     <label for="email">Enter email:</label>
@@ -106,9 +117,16 @@
                     <label for="message">Message:</label>
                     <textarea name="message" id="message" rows="5" required></textarea>
                     <button type="submit">Send Message</button>
+                    <p id="form-msg"></p>
                 </form>
             </div>
         </section>
     </main>
+    <footer>
+        <p id="window-size"></p>
+        <p id="page-url"></p>
+        <button id="top-btn">Back to Top</button>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

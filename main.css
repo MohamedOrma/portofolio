@@ -1,3 +1,25 @@
+:root {
+    --bg1: #0f0c29;
+    --bg2: #302b63;
+    --bg3: #24243e;
+    --text: white;
+    --nav-bg: #0f0c29;
+    --card-bg: var(--card-bg);
+    --input-bg: #1b1840;
+    --accent: #00d4ff;
+    }
+
+    body.light {
+    --bg1: #e8f1ff;
+    --bg2: #f3e9ff;
+    --bg3: #ffffff;
+    --text: #1a1a2e;
+    --nav-bg: #ffffff;
+    --card-bg: rgba(0, 0, 0, 0.06);
+    --input-bg: #ffffff;
+    --accent: #0077aa;
+    }
+
     * {
     margin: 0;
     padding: 0;
@@ -10,9 +32,9 @@
 
     body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background: linear-gradient(135deg, var(--bg1), var(--bg2), var(--bg3));
     background-attachment: fixed;
-    color: white;
+    color: var(--text);
     line-height: 1.6;
     }
 
@@ -21,7 +43,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
-    background-color: #0f0c29;
+    background-color: var(--nav-bg);
     position: sticky;
     top: 0;
     z-index: 10;
@@ -31,7 +53,7 @@
     .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #00d4ff;
+    color: var(--accent);
     }
 
     .links {
@@ -41,7 +63,7 @@
     }
 
     .links a {
-    color: white;
+    color: var(--text);
     text-decoration: none;
     transition: color 0.3s;
     }
@@ -84,7 +106,7 @@
 
     .hero h2 {
     font-size: 28px;
-    color: #00d4ff;
+    color: var(--accent);
     margin-bottom: 15px;
     }
 
@@ -107,7 +129,7 @@
     text-align: center;
     font-size: 36px;
     margin-bottom: 30px;
-    color: #00d4ff;
+    color: var(--accent);
     }
 
     .sub-title {
@@ -133,7 +155,7 @@
     }
 
     .card {
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: var(--card-bg);
     padding: 30px;
     border-radius: 20px;
     text-align: center;
@@ -153,7 +175,7 @@
     .goals {
     max-width: 450px;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: var(--card-bg);
     padding: 25px 25px 25px 50px;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
@@ -199,7 +221,7 @@
     }
 
     .project-card {
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: var(--card-bg);
     border: 2px solid #7b2ff7;
     border-radius: 20px;
     padding: 30px;
@@ -213,7 +235,7 @@
     }
 
     .project-card h3 {
-    color: #00d4ff;
+    color: var(--accent);
     margin-bottom: 10px;
     }
 
@@ -246,9 +268,9 @@
     }
 
     .contact-info a {
-    color: white;
+    color: var(--text);
     text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: var(--card-bg);
     padding: 12px 30px;
     border-radius: 15px;
     transition: background-color 0.3s, transform 0.3s;
@@ -256,6 +278,7 @@
 
     .contact-info a:hover {
     background-color: #7b2ff7;
+    color: white;
     transform: translateX(8px);
     }
 
@@ -264,7 +287,7 @@
     flex-direction: column;
     gap: 12px;
     width: 400px;
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: var(--card-bg);
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
@@ -274,15 +297,15 @@
     padding: 12px;
     border-radius: 10px;
     border: 2px solid transparent;
-    background-color: #1b1840;
-    color: white;
+    background-color: var(--input-bg);
+    color: var(--text);
     font-size: 16px;
     outline: none;
     transition: border-color 0.3s, box-shadow 0.3s;
     }
 
     input:focus, textarea:focus {
-    border-color: #00d4ff;
+    border-color: var(--accent);
     box-shadow: 0 0 12px #00d4ff;
     }
 
@@ -305,8 +328,69 @@
     footer {
     text-align: center;
     padding: 25px;
-    background-color: #0f0c29;
+    background-color: var(--nav-bg);
     color: #aaaaaa;
+    }
+
+    .menu-btn {
+    display: none;
+    padding: 8px 15px;
+    }
+
+    #theme-btn {
+    padding: 8px 20px;
+    }
+
+    #welcome {
+    font-size: 20px;
+    color: var(--accent);
+    margin-top: 15px;
+    }
+
+    #hobby-msg {
+    margin-top: 20px;
+    }
+
+    .add-skill {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    }
+
+    .add-skill input {
+    width: 250px;
+    }
+
+    .add-skill button {
+    padding: 12px 25px;
+    }
+
+    #skill-msg {
+    text-align: center;
+    color: #ff4ecd;
+    margin-top: 10px;
+    }
+
+    .remove-x {
+    cursor: pointer;
+    margin-left: 5px;
+    }
+
+    .remove-x:hover {
+    color: red;
+    }
+
+    #form-msg {
+    font-weight: bold;
+    }
+
+    footer p {
+    margin-bottom: 8px;
+    }
+
+    footer button {
+    padding: 10px 25px;
     }
 
     @media (max-width: 800px) {
@@ -318,7 +402,20 @@
     }
 
     .links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        order: 5;
         gap: 15px;
+    }
+
+    .links.open {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
     }
 
     section {
